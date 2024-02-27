@@ -1,9 +1,3 @@
-import { FindByNameInBox } from "./findByNameInBox";
-import { PrintBox } from "./printBox";
-import { Moving } from "./moving";
-import { FindInMoving } from "./findInMoving";
-import { PrintMoving } from "./printMoving";
-
 export interface Element {
   name: string,
   size: number
@@ -23,7 +17,6 @@ export class Box<T extends Element> implements BoxInterface<T>{
     this.occupancy = this.elements.reduce((acc, element) => {
       return acc + element.size;
     }, 0);
-    if (this.occupancy > this.maxCappacity) console.log("!Los elementos que estás intentando introducir no caben en la caja!");
   }
   private occupancy:number = 0;
 
@@ -47,13 +40,3 @@ export class Box<T extends Element> implements BoxInterface<T>{
 }
 
 
-const myBox1 = new Box([{name: "objeto 1", size: 7, description: "es un objeto que meto primero"}, {name: "objeto 2", size: 1}], 1,  10);
-const myBox2 = new Box([{name: "objeto 4", size: 5}, {name: "objeto 5", size: 7}], 2, 20);
-
-const myMoving = new Moving([myBox1, myBox2]);
-
-const myFinderInMoving = new FindInMoving(myMoving, "objeto 4");
-
-const myPrinter = new PrintMoving(myMoving);
-
-myPrinter.print();

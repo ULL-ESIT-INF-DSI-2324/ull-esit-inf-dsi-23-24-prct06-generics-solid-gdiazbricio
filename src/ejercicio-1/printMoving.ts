@@ -5,11 +5,13 @@ import { PrintBox } from "./printBox";
 export class PrintMoving<T extends Element> {
   constructor(private moving: Moving<T>){}
 
-  print(): void {
+  print(): string {
     const printer = new PrintBox(this.moving.getBoxes()[0]);
+    let resultingString = "";
     this.moving.getBoxes().forEach((box) => {
       printer.setBox(box);
-      console.log(`La caja ${box.identifier} contiene: \n` + printer.print());
+      resultingString += `La caja ${box.identifier} contiene: \n` + printer.print();
     })
+    return resultingString;
   }
 }
