@@ -1,6 +1,9 @@
 {
   "entryPoints": [
-    "./src/ejercicio1.ts"
+    "./src/ejercicio-1-modi/arithmeticable.ts",
+    "./src/ejercicio-1-modi/arithmeticableCollection.ts",
+    "./src/ejercicio-1-modi/complex.ts",
+    "./src/ejercicio-1-modi/rational.ts"
   ],
   "out": "./docs"
 }
