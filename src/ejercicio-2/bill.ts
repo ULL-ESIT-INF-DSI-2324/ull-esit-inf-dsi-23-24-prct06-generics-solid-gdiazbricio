@@ -4,5 +4,11 @@ export interface PrintableBill {
 }
 
 export class Bill {
-  constructor(public readonly client: string, public readonly provider: string, public readonly date: string, public readonly price: number, public readonly elements: string[]){}
+  constructor(
+    public readonly client: string,
+    public readonly provider: string,
+    public readonly date: string,
+    public readonly price: number,
+    public readonly elements: string[]
+  ) {}
 }

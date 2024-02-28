@@ -1,13 +1,13 @@
 import { Box, Element } from "./box";
 
-export class Moving <T extends Element>{
-  constructor(private boxes: Box<T>[]){}
+export class Moving<T extends Element> {
+  constructor(private boxes: Box<T>[]) {}
 
   getBoxes(): Box<T>[] {
     return this.boxes;
   }
 
-  numberOfBoxes(): number{
+  numberOfBoxes(): number {
     return this.boxes.length;
   }
 
@@ -18,6 +18,6 @@ export class Moving <T extends Element>{
   deleteBox(identifier: number): void {
     this.boxes = this.boxes.filter((element) => {
       return identifier !== element.identifier;
-    })
+    });
   }
 }
