@@ -4,7 +4,7 @@
   "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/G0JN8jPZ)",
   "main": "index.js",
   "scripts": {
-    "start": "tsc-watch --onSuccess \"node dist/ejercicio-1-modi/arithmeticableCollection.js\"",
+    "start": "tsc-watch --onSuccess \"node dist/ejercicio-5/ejercicio-5.js\"",
     "test": "mocha",
     "doc": "typedoc",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls && rm -rf .nyc_output"
@@ -27,5 +27,8 @@
     "ts-node": "^10.9.2",
     "tsc-watch": "^6.0.4",
     "typedoc": "^0.25.9"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.22"
   }
 }
