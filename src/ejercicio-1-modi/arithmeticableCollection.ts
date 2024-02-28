@@ -4,7 +4,7 @@ import { Arithmeticable } from "./arithmeticable";
  * Class that stores arithmeticable elements.
  */
 export class ArithmeticableCollection<T extends Arithmeticable<T>> {
-  constructor(public readonly elements: T[]){}
+  constructor(public readonly elements: T[]) {}
 
   /**
    * Pushes a new arithmeticable element to the collection.

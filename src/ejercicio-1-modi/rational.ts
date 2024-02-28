@@ -4,7 +4,10 @@ import { Arithmeticable } from "./arithmeticable";
  * Class consisting on Rational numbers, implements arithmeticable interface.
  */
 export class Rational implements Arithmeticable<Rational> {
-  constructor(public readonly num1: number, public readonly num2: number) {}
+  constructor(
+    public readonly num1: number,
+    public readonly num2: number
+  ) {}
 
   /**
    * Add two rational numebers
@@ -43,10 +46,10 @@ export class Rational implements Arithmeticable<Rational> {
     const newNum = this.num1 * arithmetic.num1; // Calcular la multiplicación de los numeradores.
     const newDenom = this.num1 * arithmetic.num2; // Calcular la multiplicación de los denominadores.
     const mcdcalc = mcd(new Rational(newNum, newDenom)); // Reducir la fracción
-    return new Rational (newNum / mcdcalc, newDenom / mcdcalc);
+    return new Rational(newNum / mcdcalc, newDenom / mcdcalc);
   }
 
-    /**
+  /**
    * Divides two rational numebers
    * @param arithmetic consists on the second opperand
    * @returns a new rational with the result
@@ -55,7 +58,7 @@ export class Rational implements Arithmeticable<Rational> {
     const newNum = this.num1 * arithmetic.num2; // Multiplicamos en diagonal.
     const newDenom = this.num1 * arithmetic.num2;
     const mcdcalc = mcd(new Rational(newNum, newDenom));
-    return new Rational (newNum / mcdcalc, newDenom / mcdcalc);
+    return new Rational(newNum / mcdcalc, newDenom / mcdcalc);
   }
 }
 
@@ -82,5 +85,7 @@ function mcd(rationalNum: Rational): number {
  * @returns The result of the mcm.
  */
 function mcm(firstDenom: number, secondDenom: number): number {
-  return (firstDenom * secondDenom) / mcd(new Rational (firstDenom, secondDenom));
+  return (
+    (firstDenom * secondDenom) / mcd(new Rational(firstDenom, secondDenom))
+  );
 }
