@@ -75,8 +75,3 @@ const printerScanner = new PrinterScanner();
 printerScanner.print();
 // Scanning
 printerScanner.scan();
-
-
-
-// El código no cumplía con el principio de interface segregation, por lo que se dividió la interfaz PrintableScanable por dos 
-// interfaces, de manera que cada clase implemente la que le interesa.
