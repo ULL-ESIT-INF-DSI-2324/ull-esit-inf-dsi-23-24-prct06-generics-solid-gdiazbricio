@@ -3,7 +3,20 @@
     "./src/ejercicio-1-modi/arithmeticable.ts",
     "./src/ejercicio-1-modi/arithmeticableCollection.ts",
     "./src/ejercicio-1-modi/complex.ts",
-    "./src/ejercicio-1-modi/rational.ts"
+    "./src/ejercicio-1-modi/rational.ts",
+    "./src/ejercicio-1/box.ts",
+    "./src/ejercicio-1/findByNameInBox.ts",
+    "./src/ejercicio-1/findInMoving.ts",
+    "./src/ejercicio-1/moving.ts",
+    "./src/ejercicio-1/printBox.ts",
+    "./src/ejercicio-1/printMoving.ts",
+    "./src/ejercicio-2/bill.ts",
+    "./src/ejercicio-2/billCollection.ts",
+    "./src/ejercicio-2/billInHTML.ts",
+    "./src/ejercicio-2/billInPDF.ts",
+    "./src/ejercicio-3/ejercicio-3.ts",
+    "./src/ejercicio-4/ejercicio-4.ts",
+    "./src/ejercicio-5/ejercicio-5.ts",
   ],
   "out": "./docs"
 }
