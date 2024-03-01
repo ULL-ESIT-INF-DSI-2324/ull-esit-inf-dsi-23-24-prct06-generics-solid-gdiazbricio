@@ -87,6 +87,3 @@ fileManager.writeFile(newData);
 // Updating content
 const updatedContent = fileManager.readFile();
 console.log("Updated content:", updatedContent);
-
-
-// Se ha dividido la funcionalidad de leer y escribir en el fichero en dos clases distintas, de manera que se respete el principio de single responsabilty.
