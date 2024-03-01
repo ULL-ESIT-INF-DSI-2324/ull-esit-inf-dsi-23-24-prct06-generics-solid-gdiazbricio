@@ -61,9 +61,3 @@ emailNotifier.sendNotification('Hello World!');
 
 const shortMessageNotifier = new Notifier(new ShortMessageService());
 shortMessageNotifier.sendNotification('Hello World!');
-
-
-// El código no cumplía con el principio open-closed, por que en el caso de que quisieramos añadir un nuevo tipo de notificación,
-// se tendría que haber modificado los tipos de notificationService, de manera que lo que se hizo fue una interfaz NotificationService,
-// que define el método notify(), de manera que notificationService sea de tipo NotificationService y cuando queramos añadir nuevos tipos de
-// notificaciones, creamos una nueva clase que implemente la interfaz.
